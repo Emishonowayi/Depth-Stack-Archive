@@ -26,6 +26,22 @@ export default function StudioSevenArchive() {
 
   return (
     <div className="relative min-h-screen flex flex-col" style={{ backgroundColor: "#f0f0f0" }}>
+
+      {/* Mobile fallback — hidden on md+ */}
+      <div className="md:hidden fixed inset-0 z-[100] flex items-center justify-center px-8" style={{ backgroundColor: "#f0f0f0" }}>
+        <p
+          style={{
+            fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif",
+            fontWeight: 500,
+            fontSize: "16px",
+            letterSpacing: "-0.32px",
+            color: "#000",
+            textAlign: "center",
+          }}
+        >
+          Mobile support is coming soon.<br />Please view on desktop.
+        </p>
+      </div>
       <ArchiveHeader />
       {/* Spacer reserves the space the fixed header no longer occupies in flow */}
       <div style={{ height: HEADER_HEIGHT }} className="shrink-0" />
